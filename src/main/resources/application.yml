@@ -9,13 +9,13 @@ spring:
       - id: ccip-patient
         uri: lb://ccip-patient
         predicates:
-        - Path=/api/**
+        - Path=/patient/**
         filters:
           - StripPrefix=1
       - id: ccip-encounter
         uri: lb://ccip-encounter
         predicates:
-        - Path=/api/**
+        - Path=/encounter/**
         filters:
           - StripPrefix=1
 eureka:
