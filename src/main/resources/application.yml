@@ -9,21 +9,13 @@ spring:
       - id: ccip-patient
         uri: lb://ccip-patient
         predicates:
-<<<<<<< HEAD
         - Path=/api/**
-=======
-        - Path=/patient/**
->>>>>>> branch 'master' of https://github.com/bjli2018/ccip-gateway.git
         filters:
           - StripPrefix=1
       - id: ccip-encounter
         uri: lb://ccip-encounter
         predicates:
-<<<<<<< HEAD
         - Path=/api/**
-=======
-        - Path=/encounter/**
->>>>>>> branch 'master' of https://github.com/bjli2018/ccip-gateway.git
         filters:
           - StripPrefix=1
 eureka:
