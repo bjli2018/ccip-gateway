@@ -9,11 +9,15 @@ spring:
       - id: ccip-patient
         uri: lb://ccip-patient
         predicates:
-        - Path=/patient/**
+        - Path=/api/**
+        filters:
+          - StripPrefix=1
       - id: ccip-encounter
         uri: lb://ccip-encounter
         predicates:
-        - Path=/encounter/**
+        - Path=/api/**
+        filters:
+          - StripPrefix=1
 eureka:
   instance:
     prefer-ip-address: true
